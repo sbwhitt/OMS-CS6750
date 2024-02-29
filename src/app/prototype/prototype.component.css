@@ -1,0 +1,238 @@
+a {
+    color: red;
+}
+.body {
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    justify-content: end;
+    background-color: black;
+}
+.info-modal {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(33, 33, 33, 0.75);
+    animation: dropIn 0.33s forwards;
+    overflow: auto;
+}
+@keyframes dropIn {
+    from { top: -100%; }
+    to { top: 0; }
+}
+.info-text {
+    font-size: 2rem;
+    color: white;
+    margin: 1rem;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+.settings-modal {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(33, 33, 33, 0.75);
+    animation: fadeIn 0.33s forwards;
+}
+@keyframes fadeIn {
+    from { background-color: rgba(0, 0, 0, 0); }
+    to { background-color: rgba(33, 33, 33, 0.75); }
+}
+.settings {
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    color: white;
+    padding: 0rem 2rem 0.5rem 1.5rem;
+    background-color: #333;
+    border-radius: 0.3rem;
+}
+.title {
+    font-size: 32px;
+    padding-top: 1rem;
+}
+.sample-bg-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 6rem;
+    background-image: url(
+        https://assets.nflxext.com/ffe/siteui/account/images/sky-background.jpg
+    );
+    margin: 1rem 0 1rem 0;
+    text-align: center;
+}
+.sample-text {
+    text-shadow: 1px 1px 1px #000;
+    font-size: 20px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.button {
+    width: 7rem;
+    height: 2rem;
+    margin-top: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 1px;
+}
+.button:hover {
+    cursor: pointer;
+}
+.label-text {
+    font-size: 16px;
+    color: #ccc;
+}
+.size-picker {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.font-size-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33%;
+    height: 100%;
+    margin: 0;
+    appearance: none;
+    color: black;
+    background: white;
+    outline: solid 1px black;
+}
+.font-size-option:hover {
+    cursor: pointer;
+    background: #ccc;
+}
+.color-pick {
+    width: 40%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom,transparent,transparent 48%,#ccc 49%,#ccc 51%,transparent 52%,transparent);
+    outline: solid #ccc 1px;
+}
+.dropdown {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    outline: none;
+    font-size: 1em;
+}
+.dropdown:hover {
+    cursor: pointer;
+}
+.player {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.caption-menu {
+    width: 20rem;
+    color: white;
+    padding: 0rem 2rem 0.5rem 1.5rem;
+    background-color: #333;
+    border-radius: 0.3rem;
+    margin: 1rem;
+}
+.caption-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.caption-item:hover {
+    cursor: pointer;
+    background-color: #444;
+}
+.progress-bar {
+    width: 99%;
+    border: solid 2px red;
+}
+.progress-bar:hover {
+    cursor: pointer;
+}
+.show-info {
+    font-size: 1.25rem;
+    padding-top: 2rem;
+    color: white;
+}
+.icon-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+.icon {
+    color: white;
+    padding: 1rem;
+}
+.icon:hover {
+    cursor: pointer;
+    scale: 120%;
+}
+.info-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 1rem;
+}
+.info-icon:hover {
+    cursor: pointer;
+    scale: 120%;
+}
+.gear-icon {
+    margin-top: 1.5em;
+}
+.gear-icon:hover {
+    cursor: pointer;
+}
+.close-icon {
+    margin-top: 1.5em;
+}
+.close-icon:hover {
+    cursor: pointer;
+}
+.underline {
+    width: 66%;
+    margin-top: -0.25rem;
+    margin-bottom: 0;
+    border: 2px solid red;
+    animation: expand 0.25s forwards;
+}
+@keyframes expand {
+    from { width: 0; }
+    to { width: 66%; }
+}
