@@ -2,7 +2,7 @@ import json
 
 if __name__ == "__main__":
     for i in range(1, 4):
-        file = "./survey" + str(i) + ".json"
+        file = "../assets/surveys/survey" + str(i) + ".json"
         print("opening " + file)
         new_data = []
         with open(file, "r") as fin:
