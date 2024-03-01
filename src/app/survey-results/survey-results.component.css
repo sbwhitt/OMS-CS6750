@@ -22,6 +22,12 @@
     background: #555;
     scale: 102%;
 }
+.survey-btn:focus {
+    outline: solid white 2px;
+}
+.selected {
+    outline: solid white 2px;
+}
 .selected-survey {
     display: flex;
     flex-direction: column;

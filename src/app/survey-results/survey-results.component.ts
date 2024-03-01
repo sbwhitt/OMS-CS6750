@@ -1,7 +1,7 @@
 interface Question { id: string; text: string; answers: string[]; selected: boolean };
 
 import { Component } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgClass } from '@angular/common';
 import survey1Data from "../../assets/surveys/survey1.json";
 import survey2Data from "../../assets/surveys/survey2.json";
 import survey3Data from "../../assets/surveys/survey3.json";
@@ -9,15 +9,17 @@ import survey3Data from "../../assets/surveys/survey3.json";
 @Component({
   selector: 'app-survey-results',
   standalone: true,
-  imports: [NgIf, NgFor],
+  imports: [NgIf, NgFor, NgClass],
   templateUrl: './survey-results.component.html',
   styleUrl: './survey-results.component.css'
 })
 export class SurveyResultsComponent {
-  selectedSurvey: Question[] | null = null;
+  surveyNumber: number = 1;
+  selectedSurvey: Question[] | null = survey1Data;
   selectedQuestions: number[] = [];
 
   selectSurvey = (i: number) => {
+    this.surveyNumber = i;
     switch (i) {
       case 1:
         this.selectedSurvey = survey1Data;
