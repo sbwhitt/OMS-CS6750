@@ -32,6 +32,7 @@ export class PrototypeComponent {
     { title: "German", active: false }
   ];
   selectedCaptionLang: number = 1;
+  fontSize: string = "m";
 
   @HostListener('document:keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent) {
@@ -88,6 +89,11 @@ export class PrototypeComponent {
     this.captionsOpen = !this.captionsOpen;
   }
 
+  resetSettings() {
+    this.fontSize = "m";
+    this.toggleSettings();
+  }
+
   toggleSettings () {
     this.settingsOpen = !this.settingsOpen;
   }
@@ -111,5 +117,37 @@ export class PrototypeComponent {
   selectCaption(i: number) {
     for (let j = 0; j < this.captionOptions.length; j++) this.captionOptions[j].active = (j === i);
     if (i !== 0) this.selectedCaptionLang = i;
+  }
+
+  getFontPickerBg(size: string) {
+    return size === this.fontSize ? "#ccc" : "white";
+  }
+
+  setFontSize(size: string) {
+    this.fontSize = size;
+  }
+
+  getFontSizeSample() {
+    switch(this.fontSize) {
+      case "s":
+        return "1rem";
+      case "m":
+        return "1.25rem";
+      case "l":
+        return "1.5rem";
+      default: return "1rem";
+    }
+  }
+
+  getFontSizeCaption() {
+    switch(this.fontSize) {
+      case "s":
+        return "2rem";
+      case "m":
+        return "3rem";
+      case "l":
+        return "4rem";
+      default: return "3rem";
+    }
   }
 }

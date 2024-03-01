@@ -73,7 +73,7 @@ a {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 6rem;
+    height: 4rem;
     background-image: url(
         https://assets.nflxext.com/ffe/siteui/account/images/sky-background.jpg
     );
@@ -82,7 +82,7 @@ a {
 }
 .sample-text {
     text-shadow: 1px 1px 1px #000;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 .row {
     display: flex;
@@ -97,7 +97,7 @@ a {
 }
 .button {
     width: 7rem;
-    height: 2rem;
+    height: 2.5rem;
     margin-top: 1rem;
     outline: none;
     border: none;

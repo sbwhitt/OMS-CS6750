@@ -19,7 +19,7 @@
             </div>
             <p>Change the way that subtitles appear for the current profile.</p>
             <div class="sample-bg-img">
-                <p class="sample-text">This is how your captions will appear</p>
+                <p class="sample-text" [style]="'font-size: ' + getFontSizeSample()">This is how your captions will appear</p>
             </div>
             <div class="row">
                 <div style="margin-right: 0.5rem;" class="input-group">
@@ -31,19 +31,20 @@
                 <div style="margin-left: 0.5rem;" class="input-group">
                     <label class="label-text">Text Size: Medium</label>
                     <div class="size-picker">
-                        <p id="font-small" class="font-size-option" type="radio" title="Small">
-                            <span style="margin: auto; font-size: 16px;">A</span>
+                        <p (click)="setFontSize('s')" [style]="'background: ' + getFontPickerBg('s')" id="font-small" class="font-size-option" type="radio" title="Small">
+                            <span style="margin: auto; font-size: 1rem;">A</span>
                         </p>
-                        <p style="background: #ccc;" id="font-medium" class="font-size-option" type="radio" title="Medium">
-                            <span style="margin: auto; font-size: 20px;">A</span>
+                        <p (click)="setFontSize('m')" [style]="'background: ' + getFontPickerBg('m')" id="font-medium" class="font-size-option" type="radio" title="Medium">
+                            <span style="margin: auto; font-size: 1.25rem;">A</span>
                         </p>
-                        <p id="font-large" class="font-size-option" type="radio" title="Large">
-                            <span style="margin: auto; font-size: 24px;">A</span>
+                        <p (click)="setFontSize('l')" [style]="'background: ' + getFontPickerBg('l')" id="font-large" class="font-size-option" type="radio" title="Large">
+                            <span style="margin: auto; font-size: 1.5rem;">A</span>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <!-- additional options removed -->
+            <!-- <div class="row">
                 <div style="margin-right: 0.5rem;" class="input-group">
                     <label class="label-text">Shadow</label>
                     <select class="dropdown" title="Shadow">
@@ -60,13 +61,10 @@
                         <div class="color-pick"></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
-                <div class="row">
-                    <button style="margin-right: 0.5rem;" class="button" (click)="toggleSettings()">Reset to Default</button>
-                    <button style="margin-left: 0.5rem;" class="button" (click)="toggleSettings()">Cancel</button>
-                </div>
-                <button class="button" style="background-color: #00aaff;" (click)="toggleSettings()">Save</button>
+                <button class="button" (click)="toggleSettings()">Close</button>
+                <button class="button" (click)="resetSettings()">Reset to Default</button>
             </div>
         </div>
     </div>
@@ -93,7 +91,7 @@
             </div>
         </div>
         <span style="display: flex; flex-direction: column; justify-content: center;">
-            <span *ngIf="captionsEnabled()" class="fake-captions">{{getCaptionText()}}</span>
+            <span *ngIf="captionsEnabled()" class="fake-captions" [style]="'font-size: ' + getFontSizeCaption()">{{getCaptionText()}}</span>
             <hr class="progress-bar"/>
         </span>
         <div style="width: 100%; display: flex; flex-direction: row; justify-content: space-between;">
