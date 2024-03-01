@@ -149,6 +149,9 @@ a {
     cursor: pointer;
 }
 .player {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -156,6 +159,9 @@ a {
     justify-content: flex-end;
 }
 .caption-menu {
+    position: absolute;
+    top: calc(100vh - 30rem);
+    left: calc(100vw - 25.5rem);
     width: 20rem;
     color: white;
     padding: 0rem 2rem 0.5rem 1.5rem;
@@ -163,20 +169,15 @@ a {
     border-radius: 0.3rem;
     margin: 1rem;
 }
-.caption-item {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-.caption-item:hover {
-    cursor: pointer;
-    background-color: #444;
+.fake-captions {
+    margin: auto;
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+    padding-bottom: 2rem;
 }
 .progress-bar {
-    width: 99%;
+    width: 99vw;
     border: solid 2px red;
 }
 .progress-bar:hover {
@@ -186,6 +187,9 @@ a {
     font-size: 1.25rem;
     padding-top: 2rem;
     color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .icon-row {
     display: flex;
