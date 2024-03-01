@@ -13,4 +13,5 @@ mv ./docs/browser/* ./docs
 rm -rf ./docs/browser
 
 # making angular routing work with gh pages
+# https://stackoverflow.com/questions/60824483/angular-8-weird-routing-issue-after-deployed-to-github-pages
 cp ./docs/index.html ./docs/404.html

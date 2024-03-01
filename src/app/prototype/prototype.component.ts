@@ -1,5 +1,6 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-prototype',
@@ -15,28 +16,52 @@ export class PrototypeComponent {
   infoOpen = true;
   playing = false;
 
-  toggleInfo = () => {
-    console.log("clicked info close");
-    this.infoOpen = !this.infoOpen;
+  @HostListener('document:keydown', ['$event'])
+  handleKeyDown(event: KeyboardEvent) {
+    switch (event.key) {
+      case 'Escape': {
+        this.settingsOpen = false;
+        this.infoOpen = false;
+        this.captionsOpen = false;
+        break;
+      }
+      case 'i': {
+        if (!this.settingsOpen) this.toggleInfo();
+        break;
+      }
+      case 'c': {
+        if (!this.settingsOpen && !this.infoOpen) this.toggleCaptionMenu();
+        break;
+      }
+      case ' ': {
+        if (!this.settingsOpen && !this.infoOpen) this.togglePlay();
+        break;
+      }
+    }
   }
 
-  toggleCaptionMenu = () => {
+  toggleInfo () {
+    this.infoOpen = !this.infoOpen;
+    this.playing = false;
+  }
+
+  toggleCaptionMenu () {
     this.captionsOpen = !this.captionsOpen;
   }
 
-  toggleSettings = () => {
+  toggleSettings () {
     this.settingsOpen = !this.settingsOpen;
   }
 
-  openSettings = () => {
+  openSettings () {
     this.toggleSettings();
     this.toggleCaptionMenu();
     this.playing = false;
   }
 
-  toggleFullscreen = () => {}
+  toggleFullscreen() {}
 
-  togglePlay = () => {
+  togglePlay() {
     this.playing = !this.playing;
   }
 }

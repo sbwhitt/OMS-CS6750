@@ -18,7 +18,7 @@ export class SurveyResultsComponent {
   selectedSurvey: Question[] | null = survey1Data;
   selectedQuestions: number[] = [];
 
-  selectSurvey = (i: number) => {
+  selectSurvey(i: number) {
     this.surveyNumber = i;
     switch (i) {
       case 1:
@@ -36,7 +36,7 @@ export class SurveyResultsComponent {
     }
   }
 
-  selectQuestion = (i: number) => {
+  selectQuestion(i: number) {
     this.selectedSurvey![i].selected = !this.selectedSurvey![i].selected;
   }
 }
