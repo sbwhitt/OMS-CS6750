@@ -11,5 +11,5 @@ import { PrototypeComponent } from './prototype/prototype.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'CS6750 Individual Project';
+
 }
