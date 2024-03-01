@@ -11,4 +11,6 @@ ng build --output-path docs --base-href '//OMS-CS6750\'
 # rearrange the build files.....
 mv ./docs/browser/* ./docs
 rm -rf ./docs/browser
+
+# making angular routing work with gh pages
 cp ./docs/index.html ./docs/404.html
