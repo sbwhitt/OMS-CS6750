@@ -5,4 +5,4 @@ This repository holds the final prototype and survey results for Samuel Whittenb
 
 View the hosted prototype through Github Pages here: https://sbwhitt.github.io/OMS-CS6750/prototype.
 
-View survey results for the project here: https://sbwhitt.github.io/OMS-CS6750/survey-results.
+View survey results for the project here: https://sbwhitt.github.io/OMS-CS6750/surveys.

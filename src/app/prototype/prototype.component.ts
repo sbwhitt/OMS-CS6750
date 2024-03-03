@@ -2,13 +2,14 @@ import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { HostListener } from '@angular/core';
 import { CaptionItemComponent } from '../caption-item/caption-item.component';
+import { RouterLink } from '@angular/router';
 
 interface Option { title: string; active: boolean };
 
 @Component({
   selector: 'app-prototype',
   standalone: true,
-  imports: [NgIf, NgFor, CaptionItemComponent],
+  imports: [NgIf, NgFor, CaptionItemComponent, RouterLink],
   templateUrl: './prototype.component.html',
   styleUrl: './prototype.component.css'
 })

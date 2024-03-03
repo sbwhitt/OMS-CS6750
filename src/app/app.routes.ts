@@ -5,5 +5,5 @@ import { SurveyResultsComponent } from './survey-results/survey-results.componen
 export const routes: Routes = [
     {path: "", component: PrototypeComponent},
     {path: "prototype", component: PrototypeComponent},
-    {path: "survey-results", component: SurveyResultsComponent}
+    {path: "surveys", component: SurveyResultsComponent}
 ];
