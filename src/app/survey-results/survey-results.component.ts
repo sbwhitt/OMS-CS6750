@@ -5,6 +5,7 @@ import { NgFor, NgIf, NgClass } from '@angular/common';
 import survey1Data from "../../assets/surveys/survey1.json";
 import survey2Data from "../../assets/surveys/survey2.json";
 import survey3Data from "../../assets/surveys/survey3.json";
+import survey4Data from "../../assets/surveys/survey4.json";
 
 @Component({
   selector: 'app-survey-results',
@@ -39,7 +40,7 @@ export class SurveyResultsComponent {
         break;
       case 4:
         this.surveyTitle = "Final Prototype Evaluation Survey";
-        this.selectedSurvey = null;
+        this.selectedSurvey = survey4Data;
         break;
     }
   }
