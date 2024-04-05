@@ -1,0 +1,71 @@
+.card {
+    color: white;
+    /* background: #333; */
+    padding: 2rem;
+}
+.survey-options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+.survey-btn {
+    background: black;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+}
+.survey-btn:hover {
+    cursor: pointer;
+    background: #555;
+}
+.survey-btn:focus {
+    outline: solid white 2px;
+}
+.selected {
+    outline: solid white 2px;
+}
+.selected-survey {
+    display: flex;
+    flex-direction: column;
+}
+.survey-item {
+    margin: 0;
+}
+.survey-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.back-icon {
+    width: 2rem;
+    height: 2rem;
+    margin: auto 0 auto 0;
+}
+.back-icon:hover {
+    cursor: pointer;
+    scale: 110%;
+}
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+.survey-question {
+    margin: 0;
+    padding: 1rem;
+    border-radius: 3px;
+}
+.survey-question:hover {
+    cursor: pointer;
+    background: #555;
+}
+.survey-answer {
+    margin-left: 1.5rem;
+}

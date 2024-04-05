@@ -1,0 +1,14 @@
+<div class="selected-survey card">
+    <div class="survey-title">
+        <span class="title">{{surveyTitle}}</span>
+    </div>
+    <hr style="width: 100%; margin-top: 1.5rem;" />
+    <div class="survey-item" *ngFor="let q of surveyData; index as i">
+        <h3 tabindex={{5+i}} (click)="selectQuestion(i)" class="survey-question">Q{{i+1}}: {{q.text}}</h3>
+        <span *ngIf="q.selected">
+            <p class="survey-answer" *ngFor="let a of q.answers; index as j">
+                <b>A{{j+1}}:</b> {{a}}
+            </p>
+        </span>
+    </div>
+</div>
