@@ -7,4 +7,4 @@ View the hosted prototype through Github Pages here: https://sbwhitt.github.io/O
 
 View survey results for the project here: https://sbwhitt.github.io/OMS-CS6750/surveys.
 
-View team survey results for the group project here: https://sbwhitt.github.io/OMS-CS6750/team-survey.
+View team survey results for the group project here: https://sbwhitt.github.io/OMS-CS6750/team-surveys.
