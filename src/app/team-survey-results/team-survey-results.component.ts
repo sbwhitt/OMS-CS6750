@@ -3,6 +3,7 @@ interface Question { id: string; text: string; answers: string[]; selected: bool
 import { Component } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import teamSurveyData from "../../assets/surveys/team_survey.json";
+import teamEvalSurveyData from "../../assets/surveys/team_eval_survey.json";
 
 @Component({
   selector: 'app-team-survey-results',
@@ -12,11 +13,33 @@ import teamSurveyData from "../../assets/surveys/team_survey.json";
   styleUrl: './team-survey-results.component.css'
 })
 export class TeamSurveyResultsComponent {
-  surveyTitle = "Team Sudowoodo Initial Needfinding Survey Results";
-  surveyData = teamSurveyData;
+  surveyNumber: number = 1;
+  surveyTitle: string = "";
+  selectedSurvey: Question[] | null = null;
   selectedQuestions: number[] = [];
 
+  selectSurvey(i: number) {
+    this.surveyNumber = i;
+    switch (i) {
+      case 0:
+        this.selectedSurvey = null;
+        break;
+      case 1:
+        this.surveyTitle = "Team Sudowoodo Initial Needfinding Survey Results";
+        this.selectedSurvey = teamSurveyData;
+        break;
+      case 2:
+        this.surveyTitle = "Team Sudowoodo Prototype Evaluation Survey Results";
+        this.selectedSurvey = teamEvalSurveyData;
+        break;
+    }
+  }
+
+  deselectSurvey() {
+    this.selectedSurvey = null;
+  }
+
   selectQuestion(i: number) {
-    this.surveyData[i].selected = !this.surveyData[i].selected;
+    this.selectedSurvey![i].selected = !this.selectedSurvey![i].selected;
   }
 }
