@@ -1,17 +1,24 @@
 <div class="survey-options" *ngIf="selectedSurvey === null">
     <button
-        style="grid-column: 1 / 2; grid-row: 1 / 2;"
+        
         tabindex="1"
         (click)="selectSurvey(1)"
         class="survey-btn card">
         Team Sudowoodo Initial Needfinding Survey Results
     </button>
     <button
-    style="grid-column: 2 / 2; grid-row: 1 / 2;"
+        
         tabindex="2"
         (click)="selectSurvey(2)"
         class="survey-btn card">
-        Team Sudowoodo Prototype Evaluation Survey Results
+        Team Sudowoodo Initial Prototype Evaluation Survey Results
+    </button>
+    <button
+        
+        tabindex="3"
+        (click)="selectSurvey(3)"
+        class="survey-btn card">
+        Team Sudowoodo Final Prototype Evaluation Survey Results
     </button>
 </div>
 <div class="selected-survey card" *ngIf="selectedSurvey !== null">
